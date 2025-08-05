@@ -3,10 +3,10 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default async function CategoryProductsPage(props: {
-  params: { category: string };
-}) {
-  const { params } = await props; 
+export default async function CategoryProductsPage(props: 
+    {params:  Promise<{ category: string }>}) 
+{
+  const params = await props.params; 
   const { category } = params;
   console.log("Category:", category);
   const filteredCategories = products.filter(

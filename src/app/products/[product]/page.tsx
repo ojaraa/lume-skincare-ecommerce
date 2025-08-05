@@ -3,7 +3,10 @@ import { products } from "@/lib/data";
 import Image from "next/image";
 import React from "react";
 
-export default function Page({ params }: { params: { product: string } }) {
+export default async function Page(props:  
+{ params: Promise<{product: string}> }) 
+  {
+  const params = await props.params;
   const { product } = params;
   console.log("Product Name:", product);
   const productDetail = products.find(
