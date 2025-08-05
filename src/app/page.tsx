@@ -1,5 +1,5 @@
 
-import { About } from "@/components/about";
+// import { About } from "@/components/about";
 import HeroSection from "@/components/hero-section";
 import Categories from "@/components/products/categories";
 
@@ -10,7 +10,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col ">
       <HeroSection/>
       <Categories/>
-      <About/>
+      {/* <About/> */}
 
     </main>
     

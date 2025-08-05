@@ -3,12 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-export default async function CategoryProductsPage({
-  params,
-}: {
+export default async function CategoryProductsPage(props: {
   params: { category: string };
 }) {
-  const { category } = await params;
+  const { params } = await props; 
+  const { category } = params;
+  console.log("Category:", category);
   const filteredCategories = products.filter(
     (product) =>
       product.categoryId ===
@@ -16,8 +16,6 @@ export default async function CategoryProductsPage({
         (cat) => cat.slug.toLowerCase() === category.toLowerCase()
       )?.id
   );
-
-
 
   return (
     <div>
@@ -49,9 +47,7 @@ export default async function CategoryProductsPage({
                 </Link>
               </div>
 
-              <p className="text-lg ">
-                ${product?.price.toFixed(2)}
-              </p>
+              <p className="text-lg ">${product?.price.toFixed(2)}</p>
             </div>
           </div>
         ))}

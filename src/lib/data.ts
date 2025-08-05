@@ -104,7 +104,7 @@ export const products: Product[] = [
     slug: "hydrating-moisturizer",
     description: "A lightweight moisturizer that hydrates and nourishes the skin.",
     price: 29.99,
-    image: "/assets/images/hydrating-moisturizer.jpg",
+    image: "/assets/images/moisturizer1.jpg",
     categoryId: 1,
     skinType: ["dry", "normal", "combination"]
   },
@@ -114,7 +114,7 @@ export const products: Product[] = [
     slug: "anti-aging-cream",
     description: "A rich cream that reduces the appearance of fine lines and wrinkles.",
     price: 49.99,
-    image: "/assets/images/anti-aging-cream.jpg",
+    image: "/assets/images/moisturizer2.jpg",
     categoryId: 1,
     skinType: ["mature", "dry"]
   },
